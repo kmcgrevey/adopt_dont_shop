@@ -9,13 +9,13 @@ RSpec.describe "shelter show page", type: :feature do
                                state: "CO",
                                zip: "80202")
 
-    shelter_1 = Shelter.create(name: "Meg's Shelter",
+    shelter_2 = Shelter.create(name: "Meg's Shelter",
                                address: "150 Main Street",
                                city: "Hershey",
                                state: "PA",
                                zip: "17033")
 
-    visit '/shelters/1'
+    visit "/shelters/#{shelter_1.id}"
 
     expect(page).to have_content("Mike's Shelter")
     expect(page).to have_content("1331 17th Street")
