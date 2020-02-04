@@ -24,7 +24,7 @@ RSpec.describe "Update Shelters", type: :feature do
       # expect(page).to have_content('12345')
 
       # fill_in 'Name', with: "Bozo's Bazaar"
-      fill_in "#{shelter_1.name}", with: "Bozo's Bazaar"
+      # fill_in "#{shelter_1.name}", with: "Bozo's Bazaar"
       # click_on 'Submit'
       click_button
 
