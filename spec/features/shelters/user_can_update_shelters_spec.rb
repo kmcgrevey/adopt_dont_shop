@@ -27,16 +27,17 @@ RSpec.describe "Update Shelters", type: :feature do
       # fill_in "#{shelter_1.name}", with: "Bozo's Bazaar"
       # click_on 'Submit'
       click_button
+      # find('input[name="submit"]').click #FOR CSS
 
       expect(current_path).to eq("/shelters/#{shelter_1.id}")
 
-      # visit "/shelters/#{shelter_1.id}"
+      visit "/shelters/#{shelter_1.id}"
 
       # expect(page).to have_content("Bozo's Bazaar")
-      # expect(page).to have_content('123 Main')
-      # expect(page).to have_content('Kalamazoo')
-      # expect(page).to have_content('MI')
-      # expect(page).to have_content('12345')
+      expect(page).to have_content('123 Main')
+      expect(page).to have_content('Kalamazoo')
+      expect(page).to have_content('MI')
+      expect(page).to have_content('12345')
       # expect(page).to_not have_content('Bozo')
     end
   end
